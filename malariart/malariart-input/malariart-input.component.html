@@ -1,0 +1,68 @@
+<form [formGroup]="formGroup">
+
+    <app-user-search (messageEvent)='receiveMessage($event)'></app-user-search>
+    <br />
+
+    <mat-card class="form-card">
+        <mat-card-header>
+            <mat-card-title>Malaria Rapid Test</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <div fxLayout="column" class="docs-example-viewer-wrapper">
+                <mat-form-field appearance="outline">
+                    <mat-label>PBS for PM</mat-label>
+                    <input [(ngModel)]="report.malariart.pbsforPm" name="pbsforPm" formControlName="pbsforPm" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>P.Vivax</mat-label>
+                    <input [(ngModel)]="report.malariart.pVivax" formControlName="pVivax" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>P.Falciparum</mat-label>
+                    <input [(ngModel)]="report.malariart.pFalciparum" formControlName="pFalciparum" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Lot. No.</mat-label>
+                    <input [(ngModel)]="report.malariart.lotNo" formControlName="lotNo" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>B.No.</mat-label>
+                    <input [(ngModel)]="report.malariart.bNo" formControlName="bNo" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>MFG</mat-label>
+                    <input [(ngModel)]="report.malariart.mfg" formControlName="mfg" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>EXP.Date</mat-label>
+                    <input [(ngModel)]="report.malariart.expDate" formControlName="expDate" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>S.TYPHI'O'</mat-label>
+                    <input [(ngModel)]="report.malariart.sTyphiO" formControlName="sTyphiO" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>S.TYPHI'H'</mat-label>
+                    <input [(ngModel)]="report.malariart.sTyphiH" formControlName="sTyphiH" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Notes</mat-label>
+                    <input [(ngModel)]="report.malariart.notes" formControlName="notes" matInput>
+                </mat-form-field>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button type="button" mat-raised-button (click)="onSubmit()" color="primary">Submit</button>
+        </mat-card-actions>
+    </mat-card>
+</form>

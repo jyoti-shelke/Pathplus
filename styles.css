@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.form-card {
+    min-width: 100px;
+    max-width: 600px;
+}
+
+
+/* https://angular.io/guide/component-styles */
+
+:host /deep/ .mat-card-header-text {
+    margin: 0 0px;
+}

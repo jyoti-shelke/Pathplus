@@ -1,0 +1,200 @@
+<mat-card class="form-card">
+  <mat-card-header>
+    <mat-card-title>Haemogram Report</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div fxLayout="column" class="invoice docs-example-viewer-wrapper">
+      <table>
+        <tr>
+          <th [width]="120" align="left">Parm</th>
+          <th align="left">Value</th>
+          <th align="left">Unit</th>
+          <th align="left">Normal Range</th>
+        </tr>
+        <tr>
+          <td [width]="120">Haemoglobin:</td>
+          <td>{{ report.haemogram.haemoglobin }}</td>
+          <td>S</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">Total Leukocyte Count:</td>
+          <td>{{ report.haemogram.leukocyte }}</td>
+          <td>S</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">Platelet:</td>
+          <td>{{ report.haemogram.platelet }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+
+      </table>
+
+      <h3> Diffential Leukocyte Count</h3>
+      <table>
+        <tr>
+          <th [width]="120" align="left">Parm</th>
+          <th align="left">Value</th>
+          <th align="left">Unit</th>
+          <th align="left">Normal Range</th>
+        </tr>
+        <tr>
+          <td [width]="120">Neutrophils:</td>
+          <td>{{ report.haemogram.neutrophils }}</td>
+          <td>S</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">Basophils:</td>
+          <td>{{ report.haemogram.basophils }}</td>
+          <td>S</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">Monocytes:</td>
+          <td>{{ report.haemogram.monocytes }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">Eosinophils:</td>
+          <td>{{ report.haemogram.eosinophils }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">Lymphocytes:</td>
+          <td>{{ report.haemogram.lymphocytes }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+
+      </table>
+
+      <h3> Peripheral Blood Semer</h3>
+      <table>
+        <tr>
+          <th [width]="120" align="left">Parm</th>
+          <th align="left">Value</th>
+          <th align="left">Unit</th>
+          <th align="left">Normal Range</th>
+        </tr>
+        <tr>
+          <td [width]="120">RBCs Morphology:</td>
+          <td>{{ report.haemogram.rbcMorphology }}</td>
+          <td>S</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">E.S.R. By Wintrobe:</td>
+          <td>{{ report.haemogram.esrByWintrobe }}</td>
+          <td>S</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">WBCs Morphology:</td>
+          <td>{{ report.haemogram.wbcMorphology }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">Cloting Time:</td>
+          <td>{{ report.haemogram.clotingTime }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">Bleeding Time:</td>
+          <td>{{ report.haemogram.bleedingTime }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">Blood Group:</td>
+          <td>{{ report.haemogram.bloodGroup }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">Rh:</td>
+          <td>{{ report.haemogram.rh }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">Parasite:</td>
+          <td>{{ report.haemogram.Parasite }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">R-BSL:</td>
+          <td>{{ report.haemogram.rbsl }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">ME:</td>
+          <td>{{ report.haemogram.me }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">TLC:</td>
+          <td>{{ report.haemogram.tlc }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">VDRL/RPR:</td>
+          <td>{{ report.haemogram.vdrlRpr }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">MCV:</td>
+          <td>{{ report.haemogram.mcv }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">MCH:</td>
+          <td>{{ report.haemogram.mch }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">MCHC:</td>
+          <td>{{ report.haemogram.mchc }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">PDW:</td>
+          <td>{{ report.haemogram.pdw }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">Reticulocytes:</td>
+          <td>{{ report.haemogram.reticulocytes }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">Notes:</td>
+          <td>{{ report.haemogram.notes }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+
+      </table>
+      <mat-card-actions>
+        <button data-ng-click="download()">Download PDF</button>
+      </mat-card-actions>
+    </div>
+  </mat-card-content>
+</mat-card>

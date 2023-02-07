@@ -1,0 +1,23 @@
+.form-wrapper {
+    min-width: 200px;
+    width: 100%;
+    padding-right: 20px;
+}
+
+.form-wrapper-without-padding {
+    min-width: 200px;
+    width: 100%;
+    padding-right: 0px;
+}
+
+.form-card {
+    min-width: 250px;
+    max-width: 600px;
+}
+
+
+/* https://angular.io/guide/component-styles */
+
+:host /deep/ .mat-card-header-text {
+    margin: 0 0px;
+}

@@ -1,0 +1,243 @@
+<form [formGroup]="formGroup">
+
+    <app-user-search (messageEvent)='receiveMessage($event)'></app-user-search>
+    <br />
+
+    <mat-card class="form-card">
+        <mat-card-header>
+            <mat-card-title>Basic</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <div fxLayout="row" fxLayout.xs="column">
+                <div fxLayout="column" class="form-wrapper" ngClass.xs="form-wrapper-without-padding">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Haemoglobin</mat-label>
+                        <input [(ngModel)]="report.haemogram.haemoglobin" name="haemoglobin" formControlName="haemoglobin" matInput>
+                        <span matSuffix>gm/dl</span>
+                        <mat-hint align="end">14 - 18 gm% F: 12-16 gm%</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Total Leukocyte Count</mat-label>
+                        <input [(ngModel)]="report.haemogram.leukocyte" formControlName="leukocyte" matInput>
+                        <span matSuffix>mm3</span>
+                        <mat-hint align="end">5000 - 10000/mm3</mat-hint>
+                    </mat-form-field>
+                </div>
+
+                <div fxLayout="column" class="form-wrapper-without-padding">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Platelet</mat-label>
+                        <input [(ngModel)]="report.haemogram.platelet" formControlName="platelet" matInput>
+                        <span matSuffix>Lakh/mm3</span>
+                        <mat-hint align="end">1.4 - 4.4 Lakh/mm3</mat-hint>
+                    </mat-form-field>
+                </div>
+            </div>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button type="button" mat-raised-button (click)="onSubmit()" color="primary">Submit</button>
+        </mat-card-actions>
+    </mat-card>
+
+    <br />
+    <mat-card class="form-card">
+        <mat-card-header>
+            <mat-card-title>Diffential Leukocyte Count</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <div fxLayout="row" fxLayout.xs="column">
+                <div fxLayout="column" class="form-wrapper" ngClass.xs="form-wrapper-without-padding">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Neutrophils</mat-label>
+                        <input [(ngModel)]="report.haemogram.neutrophils" formControlName="neutrophils" matInput>
+                        <span matSuffix>mm3</span>
+                        <mat-hint align="end">40% - 75%</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Basophils</mat-label>
+                        <input [(ngModel)]="report.haemogram.basophils" formControlName="basophils" matInput>
+                        <span matSuffix>mm3</span>
+                        <mat-hint align="end">0% - 1%</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Monocytes</mat-label>
+                        <input [(ngModel)]="report.haemogram.monocytes" formControlName="monocytes" matInput>
+                        <span matSuffix>mm3</span>
+                        <mat-hint align="end">2% - 10%</mat-hint>
+                    </mat-form-field>
+                </div>
+
+                <div fxLayout="column" class="form-wrapper-without-padding">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Eosinophils</mat-label>
+                        <input [(ngModel)]="report.haemogram.eosinophils" formControlName="eosinophils" matInput>
+                        <span matSuffix>mm3</span>
+                        <mat-hint align="end">1% - 6%</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Lymphocytes</mat-label>
+                        <input [(ngModel)]="report.haemogram.lymphocytes" formControlName="lymphocytes" matInput>
+                        <span matSuffix>mm3</span>
+                        <mat-hint align="end">20% - 45%</mat-hint>
+                    </mat-form-field>
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button type="button" mat-raised-button (click)="onSubmit()" color="primary">Submit</button>
+        </mat-card-actions>
+    </mat-card>
+
+    <br />
+
+    <mat-card class="form-card">
+        <mat-card-header>
+            <mat-card-title>Peripheral Blood Semer</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <div fxLayout="row" fxLayout.xs="column">
+                <div fxLayout="column" class="form-wrapper" ngClass.xs="form-wrapper-without-padding">
+                    <mat-form-field appearance="outline">
+                        <mat-label>RBCs Morphology</mat-label>
+                        <input [(ngModel)]="report.haemogram.rbcMorphology" formControlName="rbcMorphology" matInput>
+                        <span matSuffix>mm3</span>
+                        <mat-hint align="end">40% - 75%</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>E.S.R. By Wintrobe</mat-label>
+                        <input [(ngModel)]="report.haemogram.esrByWintrobe" formControlName="esrByWintrobe" matInput>
+                        <span matSuffix>mm3</span>
+                        <mat-hint align="end">1% - 6%</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>WBCs Morphology</mat-label>
+                        <input [(ngModel)]="report.haemogram.wbcMorphology" formControlName="wbcMorphology" matInput>
+                        <span matSuffix>mm3</span>
+                        <mat-hint align="end">0% - 1%</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Cloting Time</mat-label>
+                        <input [(ngModel)]="report.haemogram.clotingTime" formControlName="clotingTime" matInput>
+                        <span matSuffix>mm3</span>
+                        <mat-hint align="end">20% - 45%</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Bleeding Time</mat-label>
+                        <input [(ngModel)]="report.haemogram.bleedingTime" formControlName="bleedingTime" matInput>
+                        <span matSuffix>mm3</span>
+                        <mat-hint align="end">2% - 10%</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Blood Group</mat-label>
+                        <input [(ngModel)]="report.haemogram.bloodGroup" formControlName="bloodGroup" matInput>
+                        <span matSuffix>mm3</span>
+                        <mat-hint align="end">40% - 75%</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Rh</mat-label>
+                        <input [(ngModel)]="report.haemogram.rh" formControlName="rh" matInput>
+                        <span matSuffix>mm3</span>
+                        <mat-hint align="end">1% - 6%</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Parasite</mat-label>
+                        <input [(ngModel)]="report.haemogram.parasite" formControlName="parasite" matInput>
+                        <span matSuffix>mm3</span>
+                        <mat-hint align="end">0% - 1%</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>R-BSL</mat-label>
+                        <input [(ngModel)]="report.haemogram.rbsl" formControlName="rbsl" matInput>
+                        <span matSuffix>mm3</span>
+                        <mat-hint align="end">20% - 45%</mat-hint>
+                    </mat-form-field>
+
+                </div>
+
+                <div fxLayout="column" class="form-wrapper-without-padding">
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>ME</mat-label>
+                        <input [(ngModel)]="report.haemogram.me" formControlName="me" matInput>
+                        <span matSuffix>mm3</span>
+                        <mat-hint align="end">20% - 45%</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>TLC</mat-label>
+                        <input [(ngModel)]="report.haemogram.tlc" formControlName="tlc" matInput>
+                        <span matSuffix>mm3</span>
+                        <mat-hint align="end">2% - 10%</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>VDRL/RPR</mat-label>
+                        <input [(ngModel)]="report.haemogram.vdrlRpr" formControlName="vdrlRpr" matInput>
+                        <span matSuffix>mm3</span>
+                        <mat-hint align="end">2% - 10%</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>MCV</mat-label>
+                        <input [(ngModel)]="report.haemogram.mcv" formControlName="mcv" matInput>
+                        <span matSuffix>mm3</span>
+                        <mat-hint align="end">40% - 75%</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>MCH</mat-label>
+                        <input [(ngModel)]="report.haemogram.mch" formControlName="mch" matInput>
+                        <span matSuffix>mm3</span>
+                        <mat-hint align="end">1% - 6%</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>MCHC</mat-label>
+                        <input [(ngModel)]="report.haemogram.mchc" formControlName="mchc" matInput>
+                        <span matSuffix>mm3</span>
+                        <mat-hint align="end">0% - 1%</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>PDW</mat-label>
+                        <input [(ngModel)]="report.haemogram.pdw" formControlName="pdw" matInput>
+                        <span matSuffix>mm3</span>
+                        <mat-hint align="end">20% - 45%</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Reticulocytes</mat-label>
+                        <input [(ngModel)]="report.haemogram.reticulocytes" formControlName="reticulocytes" matInput>
+                        <span matSuffix>mm3</span>
+                        <mat-hint align="end">2% - 10%</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Notes</mat-label>
+                        <textarea [(ngModel)]="report.haemogram.notes" formControlName="notes" matInput matTextareaAutosize matAutosizeMinRows="1" matAutosizeMaxRows="5"></textarea>
+                    </mat-form-field>
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button type="button" mat-raised-button (click)="onSubmit()" color="primary">Submit</button>
+        </mat-card-actions>
+    </mat-card>
+
+</form>

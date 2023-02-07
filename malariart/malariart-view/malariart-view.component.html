@@ -1,0 +1,75 @@
+<mat-card class="form-card">
+  <mat-card-header>
+    <mat-card-title>Malariart Report</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div fxLayout="column" class="invoice docs-example-viewer-wrapper">
+      <table>
+        <tr>
+          <th [width]="120" align="left">Parm</th>
+          <th align="left">Value</th>
+          <th align="left">Unit</th>
+          <th align="left">Normal Range</th>
+        </tr>
+        <tr>
+          <td [width]="120">PBS for PM:</td>
+          <td>{{ report.malariart.pbsforPm }}</td>
+          <td>S</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">P.Vivax:</td>
+          <td>{{ report.malariart.pVivax }}</td>
+          <td>S</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">P.Falciparum:</td>
+          <td>{{ report.malariart.pFalciparum }}</td>
+          <td>S</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">B.No.:</td>
+          <td>{{ report.malariart.bNo }}</td>
+          <td>S</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">MFG:</td>
+          <td>{{ report.malariart.mfg }}</td>
+          <td>S</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">EXP.Date:</td>
+          <td>{{ report.malariart.expDate }}</td>
+          <td>S</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">S.TYPHI'O':</td>
+          <td>{{ report.malariart.sTyphiO }}</td>
+          <td>S</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">S.TYPHI'H':</td>
+          <td>{{ report.malariart.sTyphiH }}</td>
+          <td>S</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">Notes:</td>
+          <td>{{ report.malariart.notes }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      <mat-card-actions>
+        <button data-ng-click="download()">Download PDF</button>
+      </mat-card-actions>
+    </div>
+  </mat-card-content>
+</mat-card>

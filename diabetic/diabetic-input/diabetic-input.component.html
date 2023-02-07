@@ -1,0 +1,104 @@
+<form [formGroup]="formGroup">
+        <app-user-search (messageEvent)='receiveMessage($event)'></app-user-search>
+  <br/>
+    <mat-card class="form-card">
+        <mat-card-header>
+            <mat-card-title>Diabetic</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <div fxLayout="column" class="docs-example-viewer-wrapper">
+                <mat-form-field appearance="outline">
+                    <mat-label>F. Blood Suger</mat-label>
+                    <input [(ngModel)]="report.diabetic.fBloodSugar" name="fBloodSugar" formControlName="fBloodSugar" matInput>
+                    <span matSuffix>mg/dl</span>
+                    <mat-hint align="end">70 - 110 mg/dl</mat-hint>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>F. Urine Sugar</mat-label>
+                    <input [(ngModel)]="report.diabetic.fUrineSugar" formControlName="fUrineSugar" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>F. Acetone</mat-label>
+                    <input [(ngModel)]="report.diabetic.fAcetone" formControlName="fAcetone" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>P.P. Blood Suger</mat-label>
+                    <input [(ngModel)]="report.diabetic.ppBloodSugar" name="ppBloodSugar" formControlName="ppBloodSugar"
+                        matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>P.P. Urine Suger</mat-label>
+                    <input [(ngModel)]="report.diabetic.ppUrineSugar" name="ppUrineSugar" formControlName="ppUrineSugar"
+                        matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>P.P. Acetone</mat-label>
+                    <input [(ngModel)]="report.diabetic.ppAcetone" name="ppAcetone" formControlName="ppAcetone" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Random(Blood S.)</mat-label>
+                    <input [(ngModel)]="report.diabetic.randomBloodS" name="randomBloodS" formControlName="randomBloodS"
+                        matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Random(Urine S.)</mat-label>
+                    <input [(ngModel)]="report.diabetic.randomUrineS" name="randomUrineS" formControlName="randomUrineS"
+                        matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Random(Acetone)</mat-label>
+                    <input [(ngModel)]="report.diabetic.randomAcetone" name="randomAcetone" formControlName="randomAcetone"
+                        matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>G.T.T.1st</mat-label>
+                    <input [(ngModel)]="report.diabetic.gtt1" name="gtt1" formControlName="gtt1" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Urine Suger</mat-label>
+                    <input [(ngModel)]="report.diabetic.urineSugar" name="urineSugar" formControlName="urineSugar" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Ketone</mat-label>
+                    <input [(ngModel)]="report.diabetic.ketone" name="ketone" formControlName="ketone" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>G.T.T.2nd</mat-label>
+                    <input [(ngModel)]="report.diabetic.gtt2" name="gtt2" formControlName="gtt2" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Urine Suger</mat-label>
+                    <input [(ngModel)]="report.diabetic.urineSugar1" name="urineSugar1" formControlName="urineSugar1" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Ketone</mat-label>
+                    <input [(ngModel)]="report.diabetic.ketone1" name="ketone1" formControlName="ketone1" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Notes</mat-label>
+                    <input [(ngModel)]="report.diabetic.notes" name="notes" formControlName="notes" matInput>
+                </mat-form-field>
+
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button type="button" mat-raised-button (click)="onSubmit()" color="primary">Submit</button>
+        </mat-card-actions>
+    </mat-card>
+</form>

@@ -1,0 +1,109 @@
+<form [formGroup]="formGroup">
+    <mat-card class="form-card">
+        <mat-card-header>
+            <mat-card-title>Hiv</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <div fxLayout="column" class="docs-example-viewer-wrapper">
+                <mat-form-field appearance="outline">
+                    <mat-label>H.I.V.I</mat-label>
+                    <input [(ngModel)]="hiv.hivI" name="hivI" formControlName="hivI" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>H.I.V.II</mat-label>
+                    <input [(ngModel)]="hiv.hivII" formControlName="hivII" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>H.I.V.-I gp 160[ENV]</mat-label>
+                    <input [(ngModel)]="hiv.hivIGp160Env" formControlName="hivIGp160Env" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>H.I.V.-I gp 120[ENV]</mat-label>
+                    <input [(ngModel)]="hiv.hivIGp120Env" formControlName="hivIGp120Env" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>H.I.V.-I p 66[POL]</mat-label>
+                    <input [(ngModel)]="hiv.hivIp66Pol" formControlName="hivIp66Pol" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>H.I.V.-I p 55[GAG]</mat-label>
+                    <input [(ngModel)]="hiv. hivIp55Gag" formControlName="hivIp55Gag" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>H.I.V.-I p 55[POL]</mat-label>
+                    <input [(ngModel)]="hiv.hivIp51Pol" formControlName="hivIp51Pol" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>H.I.V.-I p 41[ENV]</mat-label>
+                    <input [(ngModel)]="hiv.hivIGp41Env" formControlName="hivIGp41Env" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>H.I.V.-I p 39[POL]</mat-label>
+                    <input [(ngModel)]="hiv.hivIp39Pol" formControlName="hivIp39Pol" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>H.I.V.-I p 31[GAG]</mat-label>
+                    <input [(ngModel)]="hiv.hivIp31Gag" formControlName="hivIp31Gag" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label> H.I.V.-I p 24[GAG]</mat-label>
+                    <input [(ngModel)]="hiv.hivIp24Gag" formControlName="hivIp24Gag" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>H.I.V.-I p 17[GAG]</mat-label>
+                    <input [(ngModel)]="hiv.hivIp55Gag17" formControlName="hivIp55Gag17" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>KIT USED</mat-label>
+                    <input [(ngModel)]="hiv.kitUsed" formControlName="kitUsed" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Strip No.</mat-label>
+                    <input [(ngModel)]="hiv.stripNo" formControlName="stripNo" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Lot No.</mat-label>
+                    <input [(ngModel)]="hiv.lotNo" formControlName="lotNo" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>EXP. DATE</mat-label>
+                    <input [(ngModel)]="hiv.expDate" formControlName="expDate" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>result</mat-label>
+                    <input [(ngModel)]="hiv.result" formControlName="result" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>method</mat-label>
+                    <input [(ngModel)]="hiv.method" formControlName="method" matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Notes</mat-label>
+                    <input [(ngModel)]="hiv.notes" name="notes" formControlName="notes" matInput>
+                </mat-form-field>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button type="button" mat-raised-button (click)="onSubmit()" color="primary">Submit</button>
+        </mat-card-actions>
+    </mat-card>
+</form>

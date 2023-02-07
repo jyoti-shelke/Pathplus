@@ -1,0 +1,23 @@
+.form-card {
+    min-width: 100px;
+    max-width: 600px;
+    padding-left: 20px;
+}
+
+.docs-example-viewer-wrapper {
+    min-width: 100px;
+    width: 100%;
+}
+
+.docs-example-viewer-wrapper-right {
+    min-width: 100px;
+    max-width: 600px;
+    padding-left: 20px;
+}
+
+
+/* https://angular.io/guide/component-styles */
+
+:host /deep/ .mat-card-header-text {
+    margin: 0 0px;
+}

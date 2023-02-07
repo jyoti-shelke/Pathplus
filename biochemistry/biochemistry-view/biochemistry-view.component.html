@@ -1,0 +1,177 @@
+<mat-card class="form-card">
+    <mat-card-header>
+        <mat-card-title>Biochemistry Report</mat-card-title>
+    </mat-card-header>
+
+
+    <mat-card-content>
+        <div fxLayout="column" class="invoice docs-example-viewer-wrapper">
+            <table>
+                <tr>
+                    <th [width]="120" align="left">Parm</th>
+                    <th align="left">Value</th>
+                    <th align="left">Unit</th>
+                    <th align="left">Normal Range</th>
+                </tr>
+                <tr>
+                    <td [width]="120">Serum Bilirubin Total:</td>
+                    <td>{{report.biochemistry.srBilirubinTotal }}</td>
+                    <td>S</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td [width]="120">Direct:</td>
+                    <td>{{report.biochemistry.direct }}</td>
+                    <td>S</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td [width]="120">Indirect:</td>
+                    <td>{{ report.biochemistry.indirect}}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td [width]="120">SGPT:</td>
+                    <td>{{ report.biochemistry.sgpt }}</td>
+                    <td>S</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td [width]="120">SGOT:</td>
+                    <td>{{report.biochemistry.sgot }}</td>
+                    <td>S</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td [width]="120">SLAP:</td>
+                    <td>{{ report.biochemistry.slap }}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td [width]="120">Blood Urea Nitogen Level:</td>
+                    <td>{{ report.biochemistry.bloodUrea}}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td [width]="120">Serum Creatinine:</td>
+                    <td>{{ report.biochemistry.sCreatinine}}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+
+                <tr>
+                    <td [width]="120">Serum Uric Acid:</td>
+                    <td>{{report.biochemistry.sUricAcid}}</td>
+                    <td>S</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td [width]="120">Serum Total Cholesterol:</td>
+                    <td>{{ report.biochemistry.serumTotalCholesterol }}</td>
+                    <td>S</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td [width]="120">Serum Triglycerides:</td>
+                    <td>{{ report.biochemistry.serumTriglycerides }}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td [width]="120">Hdl Cholestrerol:</td>
+                    <td>{{ report.biochemistry.hdlCholestrerol }}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td [width]="120">Ldl Cholestrerol:</td>
+                    <td>{{ report.biochemistry.ldlCholestrerol}}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td [width]="120">Serum Calcium(ca+):</td>
+                    <td>{{ report.biochemistry.serumcalcium }}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td [width]="120">Serum Sodium(Na+):</td>
+                    <td>{{ report.biochemistry.serumSodium}}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td [width]="120">Serum Pottasium(K+):</td>
+                    <td>{{report.biochemistry.serumPottasium}}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td [width]="120">Serum Cloride(Ci-):</td>
+                    <td>{{ report.biochemistry.serumcloride}}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td [width]="120">Blood Sugar:</td>
+                    <td>{{ report.biochemistry.bloodSugar}}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td [width]="120">Serum Protein:</td>
+                    <td>{{ report.biochemistry.serumProtein }}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td [width]="120">Serum Albumine:</td>
+                    <td>{{ report.biochemistry.serumAlbumine }}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td [width]="120">Serum Amylase:</td>
+                    <td>{{ report.biochemistry.serumAmylase }}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td [width]="120">CRP Test:</td>
+                    <td>{{ report.biochemistry.crpTest}}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td [width]="120">Serum Cholinesterase:</td>
+                    <td>{{ report.biochemistry.serumCholinesterase }}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td [width]="120">Serum Lipase:</td>
+                    <td>{{ report.biochemistry.serumLipase}}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td [width]="120">Notes:</td>
+                    <td>{{ report.biochemistry.notes }}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+
+            </table>
+            <mat-card-actions>
+                <button data-ng-click="download()">Download PDF</button>
+            </mat-card-actions>
+        </div>
+    </mat-card-content>
+</mat-card>

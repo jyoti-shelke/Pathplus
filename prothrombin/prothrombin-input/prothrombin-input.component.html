@@ -1,0 +1,40 @@
+<form [formGroup]="formGroup">
+    <app-user-search (messageEvent)='receiveMessage($event)'></app-user-search>
+    <br/>
+
+    <mat-card class="form-card">
+        <mat-card-header>
+            <mat-card-title>Prothrombin Rapid Test</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <div fxLayout="column" class="docs-example-viewer-wrapper">
+                <mat-form-field appearance="outline">
+                    <mat-label>Control Prothdombin Time</mat-label>
+                    <input [(ngModel)]="report.prothrombin.controlTime" name="controlTime" formControlName="controlTime" matInput>
+                    <span matSuffix>Sec</span>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Patient Prothdombin Time</mat-label>
+                    <input [(ngModel)]="report.prothrombin.patientTime" formControlName="patientTime" matInput>
+                    <span matSuffix>Sec</span>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>International Normal Ratio</mat-label>
+                    <input [(ngModel)]="report.prothrombin.internationalNormalRatio" formControlName="internationalNormalRatio" matInput>
+                    <span matSuffix>Sec</span>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Notes</mat-label>
+                    <input [(ngModel)]="report.prothrombin.notes" formControlName="notes" matInput>
+                </mat-form-field>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button type="button" mat-raised-button (click)="onSubmit()" color="primary">Submit</button>
+        </mat-card-actions>
+    </mat-card>
+</form>

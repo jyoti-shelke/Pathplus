@@ -1,0 +1,185 @@
+<form [formGroup]="formGroup">
+
+    <app-user-search (messageEvent)='receiveMessage($event)'></app-user-search>
+    <br/>
+  <mat-card class="form-card">
+    <mat-card-header>
+      <mat-card-title>Biochemistry</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div fxLayout="column" class="docs-example-viewer-wrapper">
+        <mat-form-field appearance="outline">
+          <mat-label>Serum Bilirubin Total</mat-label>
+          <input [(ngModel)]="report.biochemistry.srBilirubinTotal" formControlName="srBilirubinTotal" matInput>
+          <span matSuffix>mg/dl</span>
+          <mat-hint align="end">0.1 - 1.2 mg/dl</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Direct</mat-label>
+          <input [(ngModel)]="report.biochemistry.direct" formControlName="direct" matInput>
+          <span matSuffix>mg/dl</span>
+          <mat-hint align="end">0.0 - 0.3 mg/dl</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Indirect</mat-label>
+          <input [(ngModel)]="report.biochemistry.indirect" formControlName="indirect" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>SGPT</mat-label>
+          <input [(ngModel)]="report.biochemistry.sgpt" formControlName="sgpt" matInput>
+          <span matSuffix>IU/dl</span>
+          <mat-hint align="end">0.0 - 40 IU/dl</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>SGOT</mat-label>
+          <input [(ngModel)]="report.biochemistry.sgot" formControlName="sgot" matInput>
+          <span matSuffix>IU/dl</span>
+          <mat-hint align="end">5.0 - 34 IU/dl</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>SLAP</mat-label>
+          <input [(ngModel)]="report.biochemistry.slap" formControlName="slap" matInput>
+          <span matSuffix>IU/dl</span>
+          <mat-hint align="end">15 - 112 IU/dl</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Blood Urea Nitogen Level</mat-label>
+          <input [(ngModel)]="report.biochemistry.bloodUrea" formControlName="bloodUrea" matInput>
+          <span matSuffix>mg/dL</span>
+          <mat-hint align="end">6 - 21 mg/dL</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Serum Creatinine</mat-label>
+          <input [(ngModel)]="report.biochemistry.sCreatinine" formControlName="sCreatinine" matInput>
+          <span matSuffix>mg/dL</span>
+          <mat-hint align="end">0.6 - 1.4 mg/dL</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Serum Uric Acid</mat-label>
+          <input [(ngModel)]="report.biochemistry.sUricAcid" formControlName="sUricAcid" matInput>
+          <span matSuffix>mg/dL</span>
+          <mat-hint align="end">2.5 - 7.5 mg/dL</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Serum Total Cholesterol</mat-label>
+          <input [(ngModel)]="report.biochemistry.serumTotalCholesterol" formControlName="serumTotalCholesterol" matInput>
+          <span matSuffix>mg/dL</span>
+          <mat-hint align="end">140 - 250 mg/dL</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Serum Triglycerides</mat-label>
+          <input [(ngModel)]="report.biochemistry.serumTriglycerides" formControlName="serumTriglycerides" matInput>
+          <span matSuffix>mg/dL</span>
+          <mat-hint align="end">25 - 160 mg/dL</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Hdl Cholestrerol</mat-label>
+          <input [(ngModel)]="report.biochemistry.hdlCholestrerol" formControlName="hdlCholestrerol" matInput>
+          <span matSuffix>mg/dL</span>
+          <mat-hint align="end">30 - 80 mg/dL</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Ldl Cholestrerol</mat-label>
+          <input [(ngModel)]="report.biochemistry.ldlCholestrerol" formControlName="ldlCholestrerol" matInput>
+          <span matSuffix>mg/dL</span>
+          <mat-hint align="end">Up to 160 mg/dL</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Serum Calcium(ca+)</mat-label>
+          <input [(ngModel)]="report.biochemistry.serumcalcium" formControlName="serumcalcium" matInput>
+          <span matSuffix>mg/dL</span>
+          <mat-hint align="end">8.5 - 10.5 mg/dL</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Serum Sodium(Na+)</mat-label>
+          <input [(ngModel)]="report.biochemistry.serumSodium" formControlName="serumSodium" matInput>
+          <span matSuffix>mg/dL</span>
+          <mat-hint align="end">135 - 155 mg/dL</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Serum Pottasium(K+)</mat-label>
+          <input [(ngModel)]="report.biochemistry.serumPottasium" formControlName="serumPottasium" matInput>
+          <span matSuffix>mg/dL</span>
+          <mat-hint align="end">3.5 - 5.5 mg/dL</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Serum Cloride(Ci-)</mat-label>
+          <input [(ngModel)]="report.biochemistry.serumcloride" formControlName="serumcloride" matInput>
+          <span matSuffix>mg/dL</span>
+          <mat-hint align="end">97 - 107 mg/dL</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Blood Sugar</mat-label>
+          <input [(ngModel)]="report.biochemistry.bloodSugar" formControlName="bloodSugar" matInput>
+          <span matSuffix>mg/dL</span>
+          <mat-hint align="end">170 - 160 mg/dL</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Serum Protein</mat-label>
+          <input [(ngModel)]="report.biochemistry.serumProtein" formControlName="serumProtein" matInput>
+          <span matSuffix>mg/dL</span>
+          <mat-hint align="end">6 - 8.3 mg/dL</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Serum Albumine</mat-label>
+          <input [(ngModel)]="report.biochemistry.serumAlbumine" formControlName="serumAlbumine" matInput>
+          <span matSuffix>mg/dL</span>
+          <mat-hint align="end">3.2 - 5.0 mg/dL</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Serum Amylase</mat-label>
+          <input [(ngModel)]="report.biochemistry.serumAmylase" formControlName="serumAmylase" matInput>
+          <span matSuffix>mg/dL</span>
+          <mat-hint align="end">0 - 90 mg/dL</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>CRP Test</mat-label>
+          <input [(ngModel)]="report.biochemistry.crpTest" formControlName="crpTest" matInput>
+
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Serum Cholinesterase</mat-label>
+          <input [(ngModel)]="report.biochemistry.serumCholinesterase" formControlName="serumCholinesterase" matInput>
+
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Serum Lipase</mat-label>
+          <input [(ngModel)]="report.biochemistry.serumLipase" formControlName="serumLipase" matInput>
+
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Notes</mat-label>
+          <input [(ngModel)]="report.biochemistry.notes" name="notes" formControlName="notes" matInput>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button type="button" mat-raised-button (click)="onSubmit()" color="primary">Submit</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

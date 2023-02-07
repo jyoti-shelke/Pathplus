@@ -1,0 +1,77 @@
+<mat-card class="form-card">
+  <mat-card-header>
+    <mat-card-title>Diabetic Report</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div fxLayout="column" class="invoice docs-example-viewer-wrapper">
+        <h3> Diffential Leukocyte Count</h3>
+      <table>
+        <tr>
+          <th [width]="120" align="left">Parm</th>
+          <th align="left">Value</th>
+          <th align="left">Unit</th>
+          <th align="left">Normal Range</th>
+        </tr>
+        <tr>
+          <td [width]="120">F. Blood Suger:</td>
+          <td>{{ report.diabetic.fBloodSugar }}</td>
+          <td>S</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">F. Urine Sugar:</td>
+          <td>{{ report.diabetic.fUrineSugar}}</td>
+          <td>S</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">F. Acetone:</td>
+          <td>{{ report.diabetic.fAcetone}}</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">P.P. Blood Suger:</td>
+          <td>{{ report.diabetic.ppBloodSugar }}</td>
+          <td>S</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">P.P. Urine Suger:</td>
+          <td>{{ report.diabetic.ppUrineSugar}}</td>
+          <td>S</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">P.P. Acetone:</td>
+          <td>{{ report.diabetic.ppAcetone}}</td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td [width]="120">Random(Blood S.):</td>
+          <td>{{ report.diabetic.randomBloodS }}</td>
+          <td>S</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">Random(Urine S.):</td>
+          <td>{{ report.diabetic.randomUrineS}}</td>
+          <td>S</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td [width]="120">Random(Acetone):</td>
+          <td>{{ report.diabetic.randomAcetone}}</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      <mat-card-actions>
+        <button data-ng-click="download()">Download PDF</button>
+      </mat-card-actions>
+    </div>
+  </mat-card-content>
+</mat-card>
